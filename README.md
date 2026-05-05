@@ -1,5 +1,2 @@
-<meta property="og:title" content="قصة عشق AI - مساعد ذكي">
-<meta property="og:description" content="منصة ذكية للبحث عن المسلسلات التركية وعرض الحلقات مباشرة بجودة عالية وسرعة فائقة.">
-<meta property="og:image" content="https://far.q-ask.video/wp-content/uploads/2026/04/Gassal-1-560x315.jpg">
-<meta property="og:url" content="https://qisat-ishq-ai.netlify.app/">
-<meta property="og:type" content="website">
+قصة عشق AI هو محرك بحث ذكي مصمم خصيصاً لعشاق المسلسلات التركية، يوفر وصولاً سريعاً ومباشراً للحلقات بجودة عالية وتجربة استخدام احترافية. 
+بواجهة عصرية وتقنيات متقدمة، يمكنك العثور على أي محتوى تريده خلال لحظات بدون تعقيد.
