@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Center</title>
+<meta name="robots" content="index, follow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0c;color:#e4e4e7;font-family:'Segoe UI',system-ui,sans-serif;padding:20px;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+.container{max-width:800px;width:100%;margin:0 auto;flex:1}
+.header{background:linear-gradient(135deg,#6c5ce7,#3b82f6);padding:24px;border-radius:12px;text-align:center;margin-bottom:20px}
+.header h1{font-size:22px;color:#fff;margin-bottom:6px}
+.header p{color:rgba(255,255,255,.7);font-size:13px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.stat{background:#121216;border:1px solid #1f1f27;border-radius:8px;padding:14px 16px;flex:1;min-width:100px;text-align:center}
+.stat .num{font-size:20px;font-weight:700;color:#6c5ce7}
+.stat .lbl{font-size:11px;color:#a1a1aa;margin-top:2px}
+.download-box{background:#121216;border:1px solid #1f1f27;border-radius:12px;padding:24px;margin-bottom:20px;text-align:center}
+.download-box h3{font-size:15px;color:#a1a1aa;margin-bottom:16px;font-weight:400}
+.download-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#6c5ce7,#3b82f6);color:#fff;border:none;padding:14px 32px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s}
+.download-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(108,92,231,.3)}
+.download-btn span{font-size:18px}
+.download-info{color:#52525b;font-size:12px;margin-top:12px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px}
+.feature{background:#121216;border:1px solid #1f1f27;border-radius:8px;padding:16px;text-align:center}
+.feature .icon{font-size:24px;margin-bottom:8px}
+.feature .title{font-size:13px;color:#e4e4e7;font-weight:600}
+.feature .desc{font-size:11px;color:#a1a1aa;margin-top:4px}
+.placeholder-box{background:#121216;border:2px dashed #3b82f6;border-radius:12px;padding:20px;margin-bottom:20px;text-align:center;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.placeholder-box .label{font-size:14px;color:#3b82f6;font-weight:600;margin-bottom:6px}
+.placeholder-box .note{font-size:12px;color:#a1a1aa}
+.footer{text-align:center;color:#52525b;font-size:11px;padding:16px;width:100%;max-width:800px}
+@media(max-width:480px){.header h1{font-size:18px}.download-btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============================================================ -->
+  <!-- HEADER                                                        -->
+  <!-- ============================================================ -->
+  <div class="header">
+    <h1>Download links</h1>
+    <p>The links are constantly updated</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- STATS BAR                                                     -->
+  <!-- ============================================================ -->
+  <div class="stats">
+    <div class="stat">
+      <div class="num">5</div>
+      <div class="lbl">Files</div>
+    </div>
+    <div class="stat">
+      <div class="num">RAR</div>
+      <div class="lbl">Format</div>
+    </div>
+    <div class="stat">
+      <div class="num">Varied</div>
+      <div class="lbl">Size</div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- DOWNLOAD BOX — 5 BUTTONS                                     -->
+  <!-- ============================================================ -->
+  <!--
+    IMPORTANT: The download URLs are NOT set here.
+    Scroll down to the JavaScript section and edit the 5 variables
+    named DOWNLOAD_URL_1 through DOWNLOAD_URL_5.
+    Each button below is linked to its matching variable.
+  -->
+  <div class="download-box">
+    <h3>Download links</h3>
+
+    <!-- Download button 1 -> uses DOWNLOAD_URL_1 in JavaScript -->
+    <a class="download-btn" href="#" id="downloadLink1" style="margin-bottom:10px">
+      <span>⬇</span> Download 1
+    </a>
+    <br>
+
+    <!-- Download button 2 -> uses DOWNLOAD_URL_2 in JavaScript -->
+    <a class="download-btn" href="#" id="downloadLink2" style="margin-bottom:10px">
+      <span>⬇</span> Download 2
+    </a>
+    <br>
+
+    <!-- Download button 3 -> uses DOWNLOAD_URL_3 in JavaScript -->
+    <a class="download-btn" href="#" id="downloadLink3" style="margin-bottom:10px">
+      <span>⬇</span> Download 3
+    </a>
+    <br>
+
+    <!-- Download button 4 -> uses DOWNLOAD_URL_4 in JavaScript -->
+    <a class="download-btn" href="#" id="downloadLink4" style="margin-bottom:10px">
+      <span>⬇</span> Download 4
+    </a>
+    <br>
+
+    <!-- Download button 5 -> uses DOWNLOAD_URL_5 in JavaScript -->
+    <a class="download-btn" href="#" id="downloadLink5">
+      <span>⬇</span> Download 5
+    </a>
+
+    <div class="download-info"></div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- FEATURES GRID                                                 -->
+  <!-- ============================================================ -->
+  <div class="features">
+    <div class="feature">
+      <div class="icon">🎨</div>
+      <div class="title">Modern Design</div>
+      <div class="desc">Clean & professional layouts</div>
+    </div>
+    <div class="feature">
+      <div class="icon">📱</div>
+      <div class="title">Fully Responsive</div>
+      <div class="desc">Works on all devices</div>
+    </div>
+    <div class="feature">
+      <div class="icon">⚡</div>
+      <div class="title">Lightweight</div>
+      <div class="desc">Fast loading speed</div>
+    </div>
+    <div class="feature">
+      <div class="icon">🔧</div>
+      <div class="title">Easy to Edit</div>
+      <div class="desc">Well-commented code</div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- AD PLACEHOLDER (OPTIONAL — DELETE & PASTE YOUR AD CODE HERE) -->
+  <!-- ============================================================ -->
+
+  <!-- Adnan ads -->
+
+  <!--
+  TO ADD YOUR AD:
+  1. Delete the placeholder box below.
+  2. Paste your ad network code here.
+  3. Supported examples:
+     - Adsterra
+     - RichAds
+     - Monetag
+  -->
+
+  <div class="placeholder-box">
+    <div class="label">📢 Advertisement</div>
+    <div class="note">Delete this entire box and paste your ad code here</div>
+  </div>
+
+  <!-- ============================================================ -->
+
+  <!-- ============================================================ -->
+  <!-- LINK INFO SECTIONS (OPTIONAL — VISUAL ONLY)                   -->
+  <!-- ============================================================ -->
+  <!--
+    These 5 boxes are just for visual reference on the page.
+    They do NOT control the download buttons in any way.
+    The real download URLs must be set inside the JavaScript below
+    (the DOWNLOAD_URL_1 to DOWNLOAD_URL_5 variables).
+
+    You can:
+    - Delete any of these boxes if you don't want them.
+    - Keep them to show extra info about each download.
+    - The download buttons above will work regardless.
+  -->
+
+  <!-- Adnan links 1 -> corresponds to DOWNLOAD_URL_1 -->
+  <div class="placeholder-box">
+    <div class="label">🔗 Download Link 1</div>
+    <div class="note">Visual reference only. Set the real URL in DOWNLOAD_URL_1 (JavaScript below).</div>
+  </div>
+
+  <!-- Adnan links 2 -> corresponds to DOWNLOAD_URL_2 -->
+  <div class="placeholder-box">
+    <div class="label">🔗 Download Link 2</div>
+    <div class="note">Visual reference only. Set the real URL in DOWNLOAD_URL_2 (JavaScript below).</div>
+  </div>
+
+  <!-- Adnan links 3 -> corresponds to DOWNLOAD_URL_3 -->
+  <div class="placeholder-box">
+    <div class="label">🔗 Download Link 3</div>
+    <div class="note">Visual reference only. Set the real URL in DOWNLOAD_URL_3 (JavaScript below).</div>
+  </div>
+
+  <!-- Adnan links 4 -> corresponds to DOWNLOAD_URL_4 -->
+  <div class="placeholder-box">
+    <div class="label">🔗 Download Link 4</div>
+    <div class="note">Visual reference only. Set the real URL in DOWNLOAD_URL_4 (JavaScript below).</div>
+  </div>
+
+  <!-- Adnan links 5 -> corresponds to DOWNLOAD_URL_5 -->
+  <div class="placeholder-box">
+    <div class="label">🔗 Download Link 5</div>
+    <div class="note">Visual reference only. Set the real URL in DOWNLOAD_URL_5 (JavaScript below).</div>
+  </div>
+
+  <!-- ============================================================ -->
+
+  <div class="footer">Download Center</div>
+
+</div>
+
+<script>
+// ================================================================
+// ⚡ THE ONLY THING YOU NEED TO EDIT — YOUR 5 DOWNLOAD URLs
+// ================================================================
+// Each URL below is linked to the matching download button above.
+//
+// IMPORTANT RULES:
+// - Keep the quotes ('') around each URL.
+// - Example: const DOWNLOAD_URL_1 = 'https://example.com/file.rar';
+// - Leave empty ('') to disable that button (shows an alert on click).
+// ================================================================
+const DOWNLOAD_URL_1 = '';
+const DOWNLOAD_URL_2 = '';
+const DOWNLOAD_URL_3 = '';
+const DOWNLOAD_URL_4 = '';
+const DOWNLOAD_URL_5 = '';
+// ================================================================
+// DO NOT EDIT ANYTHING BELOW THIS LINE unless you know what you're doing.
+// ================================================================
+
+// Map each button ID to its URL variable
+const downloadMap = {
+  downloadLink1: DOWNLOAD_URL_1,
+  downloadLink2: DOWNLOAD_URL_2,
+  downloadLink3: DOWNLOAD_URL_3,
+  downloadLink4: DOWNLOAD_URL_4,
+  downloadLink5: DOWNLOAD_URL_5,
+};
+
+// ================================================================
+// DOWNLOAD CLICK HANDLER
+// Flow: Opens ad/popunder first (optional), then redirects.
+// ================================================================
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[id^="downloadLink"]');
+  if (!link) return;
+
+  const url = downloadMap[link.id];
+
+  if (!url) {
+    alert('No download URL set. Edit DOWNLOAD_URL_' + link.id.slice(-1) + ' in the JavaScript section above.');
+    return;
+  }
+
+  e.preventDefault();
+
+  // ==============================================================
+  // OPTIONAL: OPEN AD / POPUNDER BEFORE REDIRECT
+  // ==============================================================
+  // To enable, delete the "//" in front of the line below and
+  // replace 'https://your-ad-url.com' with your actual ad URL.
+  // ==============================================================
+  // window.open('https://your-ad-url.com', '_blank');
+  // ==============================================================
+
+  // Short delay to let the ad open, then send the visitor to the download
+  setTimeout(function() {
+    window.location.href = url;
+  }, 100);
+});
+</script>
+
+</body>
+</html>
